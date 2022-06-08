@@ -16,7 +16,7 @@ Class Kontak extends CI_Controller{
     function index(){
         //$this menuju ke api server dalam hal ini http://localhost/rest_ci/index.php/kontak
         $data['datakontak'] = json_decode($this->curl->simple_get($this->API.'/kontak'));
-        var_dump($data['datakontak']);
+        //var_dump($data['datakontak']);
         $this->load->view('kontak/list',$data);
     }
     
